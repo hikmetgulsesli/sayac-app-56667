@@ -1,0 +1,103 @@
+# Sayac-app-56667 — Urun Gereksinimleri Dokumani
+
+## 1. Genel Bakis
+
+Sayac-app-56667 kullanicilarin sayisal degerleri artirma azaltma ve sifirlama islemlerini gerceklestirebilecekleri interaktif bir web sayaci uygulamasidir. Uygulama tarayicida localStorage ile veri kaliciligi saglar. Son 10 degisiklik timestamp ile gosterilir. Karanlik ve acik tema destegi mevcuttur. Turkce arayuz ile yerel kullanicilara dogal ve akici bir deneyim sunar.
+
+Hedef kitle: Gunluk kullanicilar ogrenciler isletme sahipleri.
+
+## 2. Hedefler
+
+- Saya artirma/azaltma/sifirlama
+- Son 10 degisiklik gecmisi timestamp ile
+- Dark mode toggle
+- Veri kaliciligi localStorage
+- WCAG 2.1 AA erisilebilirlik
+- Mobil uyumlu tasarim
+
+## 3. Tech Stack
+
+| Katman | Teknoloji |
+|--------|-----------|
+| Framework | React 18.3.1 |
+| Build | Vite 5.x |
+| Language | TypeScript 5.x |
+| Styling | Tailwind CSS 3.x |
+| State | useState + useReducer |
+| Storage | localStorage |
+| Icons | Lucide React |
+| Fonts | Inter Space Grotesk |
+
+## 4. Fonksiyonel Gereksinimler
+
+### 4.1 Sayac Kontrolu
+- Artir +1, Azalt -1, Sifirla 0
+- Buton etiketleri: Arttir Azalt Sifirla
+- Icons: Plus Minus RotateCcw
+
+### 4.2 Gecmis
+- Son 10 kayit FIFO
+- Bos durum: Henuz islem yapilmadi
+- Her kayit: islem tipi timestamp onceki->yeni deger
+
+### 4.3 Tema
+- Toggle butonu sag ust
+- Sun/Moon icon
+- 300ms fade
+- localStorage key: sayac-app-56667-theme
+
+### 4.4 Kalicilik
+- Storage keys: sayac-app-56667-state sayac-app-56667-theme
+
+### 4.5 Erisilebilirlik
+- Klavye Tab/Enter/Space
+- aria-label aria-live=polite
+- Focus 2px outline
+- Touch >= 44x44px
+
+## 5. Veri Modeli
+
+interface CounterState { count: number; history: HistoryEntry[]; }
+interface HistoryEntry { id: string; type: increment|decrement|reset; previousValue: number; newValue: number; timestamp: string; }
+type Theme = light|dark|system;
+
+## 6. UI/UX Design System (Playful)
+
+Acik: Background #F0F4FF Surface #FFFFFF Primary #6366F1 Secondary #8B5CF6 Text #1E293B
+Karanlik: Background #0F172A Surface #1E293B Primary #818CF8 Secondary #A78BFA Text #F1F5F9
+Typography: Sayac Space Grotesk 96px 700 Baslik 24px 600 Buton Inter 16px 500
+Icons: Lucide React Plus Minus RotateCcw Sun Moon
+Border Radius: 8/12/16px
+
+## 7. Non-Functional
+- LCP < 1.5s TTI < 2s Bundle < 100KB
+- WCAG 2.1 AA Chrome 90+ iOS Safari 14+
+- Responsive 320px - 1920px
+
+## 8. Proje Yapisi
+
+sayac-app-56667/src/components CounterDisplay ActionButtons HistoryList HistoryItem ThemeToggle + hooks useCounter useHistory useTheme + types utils time + App.tsx main.tsx
+
+## 9. Window State
+
+window.app = { state: idle|updating count historyLength theme }
+
+## 10. Ekranlar
+
+| # | Ekran Adi | Tur | Aciklama |
+|---|-----------|-----|----------|
+| 1 | Ana Saya Ekrani | main | Sayac degeri butonlar tema toggle |
+| 2 | Bos Gecmis Durumu | empty-state | Henuz islem yapilmadi |
+| 3 | Karanlik Tema | dark-theme | Karanlik tema gorunumu |
+| 4 | Mobil Duzen | responsive | Mobil dikey yerlesim |
+
+Generate a SEPARATE screen design for EVERY page, view, modal, dialog, tab panel, and settings screen described in this PRD. Do NOT skip ANY screen — even if it seems minor.
+
+MANDATORY SCREENS:
+- If the PRD mentions "settings" or "ayarlar" → generate a Settings screen
+- If the PRD mentions tabs or bottom navigation → generate EACH tab view as a separate screen
+- If the PRD mentions modals (statistics, help, share, confirmation) → generate each as a separate screen
+- If the PRD mentions error states, empty states, loading states → generate those too
+- Generate at least as many screens as there are distinct views/pages/modals in the PRD
+
+All visible text must be in Turkish. Use a dark, modern theme.

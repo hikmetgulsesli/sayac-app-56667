@@ -1,0 +1,46 @@
+# Sayac-app-56667 — Urun Gereksinimleri Dokumani
+
+## 1. Genel Bakis
+Sayac-app-56667 kullanicilarin sayisal degerleri artirma azaltma ve sifirlama islemlerini gerceklestirebilecekleri interaktif bir web sayaci uygulamasidir. Uygulama tarayicida localStorage ile veri kaliciligi saglar. Son 10 degisiklik timestamp ile gosterilir. Karanlik ve acik tema destegi mevcuttur. Turkce arayuz ile yerel kullanicilara dogal ve akici bir deneyim sunar.
+
+## 2. Hedefler
+- Saya artirma/azaltma/sifirlama
+- Son 10 degisiklik gecmisi timestamp ile
+- Dark mode toggle
+- Veri kaliciligi localStorage
+- WCAG 2.1 AA erisilebilirlik
+- Mobil uyumlu tasarim
+
+## 3. Tech Stack
+- React, Vite, TypeScript, Tailwind CSS, Lucide React, Inter/Space Grotesk.
+
+## 4. Fonksiyonel Gereksinimler
+### 4.1 Sayac Kontrolu
+- Artir (+1), Azalt (-1), Sifirla (0)
+- Buton etiketleri: Arttir, Azalt, Sifirla
+- Icons: Plus, Minus, RotateCcw
+
+### 4.2 Gecmis
+- Son 10 kayit FIFO
+- Bos durum: Henuz islem yapilmadi
+- Her kayit: islem tipi, timestamp, onceki->yeni deger
+
+### 4.3 Tema
+- Toggle butonu sag ust
+- Sun/Moon icon
+- 300ms fade
+- localStorage key: sayac-app-56667-theme
+
+## 5. Veri Modeli
+- CounterState: count, history.
+- HistoryEntry: id, type, previousValue, newValue, timestamp.
+
+## 6. UI/UX Design System (Playful)
+- Karanlik: Background #0F172A, Surface #1E293B, Primary #818CF8, Secondary #A78BFA, Text #F1F5F9.
+- Typography: Sayac (Space Grotesk, 96px, 700), Baslik (24px, 600), Buton (Inter, 16px, 500).
+
+## 10. Ekranlar
+1. Ana Saya Ekrani (Main)
+2. Bos Gecmis Durumu (Empty State)
+3. Karanlik Tema (Dark Theme)
+4. Mobil Duzen (Responsive)

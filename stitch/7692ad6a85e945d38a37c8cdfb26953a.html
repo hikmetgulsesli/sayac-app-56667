@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sayaç - Boş Geçmiş</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#2d3449",
+                      "on-secondary-container": "#bea8ff",
+                      "on-tertiary-container": "#5e003d",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#3d0026",
+                      "surface-tint": "#bdc2ff",
+                      "on-secondary": "#381385",
+                      "secondary-fixed": "#e8ddff",
+                      "surface-container-high": "#222a3d",
+                      "inverse-primary": "#4953bc",
+                      "on-primary": "#131e8c",
+                      "surface-variant": "#2d3449",
+                      "secondary-container": "#4f319c",
+                      "inverse-on-surface": "#283044",
+                      "primary-fixed": "#e0e0ff",
+                      "surface-container-lowest": "#060e20",
+                      "on-error": "#690005",
+                      "on-surface": "#dae2fd",
+                      "outline-variant": "#454653",
+                      "inverse-surface": "#dae2fd",
+                      "on-primary-fixed-variant": "#2f3aa3",
+                      "background": "#0b1326",
+                      "primary": "#bdc2ff",
+                      "secondary": "#cebdff",
+                      "primary-container": "#818cf8",
+                      "surface-container-low": "#131b2e",
+                      "surface-dim": "#0b1326",
+                      "surface": "#0b1326",
+                      "tertiary-fixed": "#ffd8e7",
+                      "on-primary-container": "#101b8a",
+                      "on-background": "#dae2fd",
+                      "on-primary-fixed": "#000767",
+                      "secondary-fixed-dim": "#cebdff",
+                      "on-surface-variant": "#c6c5d5",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "tertiary-container": "#e869ac",
+                      "on-secondary-fixed-variant": "#4f319c",
+                      "surface-container": "#171f33",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#85145a",
+                      "surface-bright": "#31394d",
+                      "outline": "#908f9e",
+                      "on-secondary-fixed": "#21005e",
+                      "on-tertiary": "#620040",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed-dim": "#ffafd3",
+                      "tertiary": "#ffafd3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Space Grotesk"
+                      ],
+                      "display": [
+                              "Space Grotesk"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {}
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container pb-24 md:pb-0">
+<!-- TopNavBar (Web & Desktop) -->
+<header class="hidden md:flex justify-between items-center w-full px-6 h-16 max-w-screen-xl mx-auto bg-[#131b2e] transition no-border flat no shadows tonal layering text-[#dae2fd] font-['Space_Grotesk'] text-2xl font-bold tracking-tighter">
+<div>SAYAÇ</div>
+<nav class="flex gap-6 items-center">
+<!-- Active Tab Logic: Intention is 'Sayaç' (Home/Main Counter) -->
+<a class="text-[#bdc2ff] font-bold text-[16px] font-medium font-body flex items-center gap-2" href="#">Sayaç</a>
+<a class="text-[#454653] hover:bg-[#171f33] transition-colors duration-200 text-[16px] font-medium font-body flex items-center gap-2" href="#">İstatistikler</a>
+<a class="text-[#454653] hover:bg-[#171f33] transition-colors duration-200 text-[16px] font-medium font-body flex items-center gap-2" href="#">Ayarlar</a>
+<div class="flex gap-4 ml-4">
+<button class="text-[#454653] hover:text-[#bdc2ff] transition-colors"><span class="material-symbols-outlined">dark_mode</span></button>
+<button class="text-[#454653] hover:text-[#bdc2ff] transition-colors"><span class="material-symbols-outlined">history</span></button>
+</div>
+</nav>
+</header>
+<!-- TopAppBar Mobile (Header Replacement) -->
+<header class="md:hidden flex justify-between items-center w-full px-6 h-16 bg-surface-container-low text-on-surface">
+<div class="font-display text-2xl font-bold tracking-tighter text-[#dae2fd]">SAYAÇ</div>
+<div class="flex gap-4">
+<button class="text-outline-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">dark_mode</span></button>
+<button class="text-outline-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">history</span></button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-screen-xl mx-auto px-4 md:px-8 pt-8 md:pt-16 pb-32 flex flex-col md:flex-row gap-8 md:gap-16">
+<!-- Left Column: The Counter & Controls -->
+<section class="flex-1 flex flex-col items-start justify-start gap-16 md:pr-8">
+<!-- Context & Title -->
+<div class="flex flex-col gap-2">
+<h1 class="font-display text-[24px] font-semibold text-on-surface">Genel Sayaç</h1>
+<p class="font-body text-[16px] font-medium text-on-surface-variant">Günlük sayım hedeflerinizi takip edin.</p>
+</div>
+<!-- The Counter Value -->
+<div class="w-full flex justify-start items-start">
+<div class="font-display text-[96px] font-bold text-on-surface leading-none tracking-[-0.02em]">
+                    0
+                </div>
+</div>
+<!-- Kinetic Controls -->
+<div class="w-full max-w-sm flex flex-col gap-4 mt-auto">
+<div class="flex gap-4">
+<!-- Artır (Primary) -->
+<button class="flex-1 h-16 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-display font-semibold text-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.25)] flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all cubic-bezier(0.4, 0, 0.2, 1)">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add</span>
+                        Artır
+                    </button>
+<!-- Azalt (Secondary) -->
+<button class="flex-1 h-16 rounded-xl bg-surface-container text-on-surface font-display font-semibold text-[16px] flex items-center justify-center gap-2 hover:bg-surface-bright active:scale-95 transition-all cubic-bezier(0.4, 0, 0.2, 1)">
+<span class="material-symbols-outlined">remove</span>
+                        Azalt
+                    </button>
+</div>
+<!-- Sıfırla (Tertiary) -->
+<button class="w-full h-12 rounded-xl border border-outline-variant/30 text-tertiary font-body font-medium text-[16px] flex items-center justify-center gap-2 hover:bg-surface-container-low active:scale-95 transition-all cubic-bezier(0.4, 0, 0.2, 1)">
+<span class="material-symbols-outlined">restart_alt</span>
+                    Sıfırla
+                </button>
+</div>
+</section>
+<!-- Right Column: History / Empty State (Glassmorphism Overlay approach) -->
+<section class="flex-1 w-full max-w-md ml-auto md:mt-0 mt-8">
+<div class="w-full h-full min-h-[400px] rounded-[1.5rem] bg-surface-container/60 backdrop-blur-xl p-8 flex flex-col">
+<h2 class="font-display text-[24px] font-semibold text-on-surface mb-8">Geçmiş</h2>
+<!-- Empty State Content -->
+<div class="flex-grow flex flex-col items-center justify-center text-center gap-6">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-5xl text-outline-variant">history_toggle_off</span>
+</div>
+<h3 class="font-display text-[20px] font-medium text-on-surface">Henüz işlem yapılmadı</h3>
+<p class="font-body text-[14px] text-on-surface-variant max-w-[250px]">
+                        Sayacınızı kullanmaya başladığınızda geçmiş kayıtlarınız burada görünecektir.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-[#0b1326]/80 backdrop-blur-xl shadow-[0px_-10px_40px_rgba(0,0,0,0.3)] tonal shift via bg-[#131b2e]">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 text-[#818cf8] Labels: text-[12px] font-medium Inter uppercase tracking-widest text-xl font-black text-[#dae2fd]">
+<!-- Sayaç (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#818cf8]/10 text-[#bdc2ff] rounded-[1.5rem] px-5 py-2 Active: cubic-bezier(0.4, 0, 0.2, 1) scale-110" href="#">
+<span class="material-symbols-outlined mb-1" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="text-[12px] font-medium font-body uppercase tracking-widest text-[#bdc2ff]">Sayaç</span>
+</a>
+<!-- İstatistikler -->
+<a class="flex flex-col items-center justify-center text-[#454653] px-5 py-2 hover:text-[#818cf8] transition-all" href="#">
+<span class="material-symbols-outlined mb-1">leaderboard</span>
+<span class="text-[12px] font-medium font-body uppercase tracking-widest">İstatistikler</span>
+</a>
+<!-- Ayarlar -->
+<a class="flex flex-col items-center justify-center text-[#454653] px-5 py-2 hover:text-[#818cf8] transition-all" href="#">
+<span class="material-symbols-outlined mb-1">settings</span>
+<span class="text-[12px] font-medium font-body uppercase tracking-widest">Ayarlar</span>
+</a>
+</div>
+</nav>
+</body></html>
